@@ -34,6 +34,20 @@ class UsersSeeder extends Seeder
                 'deskripsi' => null
             ],
             [
+                "username" => "ananda",
+                "email" => "ananda@gmail.com",
+                "email_verified_at" => now(),
+                "password" => bcrypt("123"),
+                "no_telepon" => "087740505052",
+                "name" => null,
+                "role" => "customer",
+                "token_users" => Str::random(100),
+                "alamat_users" => null,
+                'foto_profile' => null,
+                'deskripsi' => null
+
+            ],
+            [
                 "username" => "Customer",
                 "email" => "customer@gmail.com",
                 "email_verified_at" => now(),
@@ -110,103 +124,103 @@ class UsersSeeder extends Seeder
             Kategori::create($item);
         }
 
-        $subs = [
-            [
-                'kategori_id' => 1,
-                'nama_sub_kategori' => 'Cemilan'
-            ],
-            [
-                'kategori_id' => 1,
-                'nama_sub_kategori' => 'Tradisional'
-            ],
-            [
-                'kategori_id' => 2,
-                'nama_sub_kategori' => 'Jamu'
-            ],
-            [
-                'kategori_id' => 2,
-                'nama_sub_kategori' => 'Berenergi'
-            ],
-            [
-                'kategori_id' => 3,
-                'nama_sub_kategori' => 'Kaos'
-            ],
-            [
-                'kategori_id' => 3,
-                'nama_sub_kategori' => 'Celana'
-            ],
-        ];
+        // $subs = [
+        //     [
+        //         'kategori_id' => 1,
+        //         'nama_sub_kategori' => 'Cemilan'
+        //     ],
+        //     [
+        //         'kategori_id' => 1,
+        //         'nama_sub_kategori' => 'Tradisional'
+        //     ],
+        //     [
+        //         'kategori_id' => 2,
+        //         'nama_sub_kategori' => 'Jamu'
+        //     ],
+        //     [
+        //         'kategori_id' => 2,
+        //         'nama_sub_kategori' => 'Berenergi'
+        //     ],
+        //     [
+        //         'kategori_id' => 3,
+        //         'nama_sub_kategori' => 'Kaos'
+        //     ],
+        //     [
+        //         'kategori_id' => 3,
+        //         'nama_sub_kategori' => 'Celana'
+        //     ],
+        // ];
 
-        foreach ($subs as $item) {
-            SubKategori::create($item);
-        }
+        // foreach ($subs as $item) {
+        //     SubKategori::create($item);
+        // }
 
-        $produk = [
-            [
-                'token_produk' => uniqid(13),
-                'nama_produk' => 'Copeman',
-                'deskripsi' => '<p>lorem</p>',
-                'sub_kategori_id' => 1,
-                'users_id' => 1,
-            ],
-            [
-                'token_produk' => uniqid(13),
-                'nama_produk' => 'Keripik',
-                'deskripsi' => '<p>lorem</p>',
-                'sub_kategori_id' => 1,
-                'users_id' => 3,
-            ]
-        ];
+        // $produk = [
+        //     [
+        //         'token_produk' => uniqid(13),
+        //         'nama_produk' => 'Copeman',
+        //         'deskripsi' => '<p>lorem</p>',
+        //         'sub_kategori_id' => 1,
+        //         'users_id' => 1,
+        //     ],
+        //     [
+        //         'token_produk' => uniqid(13),
+        //         'nama_produk' => 'Keripik',
+        //         'deskripsi' => '<p>lorem</p>',
+        //         'sub_kategori_id' => 1,
+        //         'users_id' => 3,
+        //     ]
+        // ];
 
-        foreach ($produk as $item) {
-            Produk::create($item);
-        }
+        // foreach ($produk as $item) {
+        //     Produk::create($item);
+        // }
 
-        AtributProduk::create([
-            'nama_varian' => 'Original',
-            'ukuran' => '100gr',
-            'harga' => 10000.00,
-            'stok' => 100,
-            'produks_id' => 1
-        ]);
-        AtributProduk::create([
-            'nama_varian' => 'Original',
-            'ukuran' => '100gr',
-            'harga' => 10000.00,
-            'stok' => 100,
-            'produks_id' => 2
-        ]);
-
-
+        // AtributProduk::create([
+        //     'nama_varian' => 'Original',
+        //     'ukuran' => '100gr',
+        //     'harga' => 10000.00,
+        //     'stok' => 100,
+        //     'produks_id' => 1
+        // ]);
+        // AtributProduk::create([
+        //     'nama_varian' => 'Original',
+        //     'ukuran' => '100gr',
+        //     'harga' => 10000.00,
+        //     'stok' => 100,
+        //     'produks_id' => 2
+        // ]);
 
 
 
-        Alamat::create([
-            'nama' => "Nama",
-            'alamat' => "Alamat",
-            'provinsi' => "Provinsi",
-            'kabupaten' => "Kabupaten",
-            'kecamatan' => "Kecamatan",
-            'desa_kelurahan' => "Kelurahan",
-            'dusun' => "Dusun",
-            'rtrw' => "RT/RW",
-            'kode_pos' => "Kode POS",
-            'users_id' => 1,
-            'detail' => "Detail Informasi"
-        ]);
 
-        Alamat::create([
-            'nama' => "Nama",
-            'alamat' => "Alamat",
-            'provinsi' => "Provinsi",
-            'kabupaten' => "Kabupaten",
-            'kecamatan' => "Kecamatan",
-            'desa_kelurahan' => "Kelurahan",
-            'dusun' => "Dusun",
-            'rtrw' => "RT/RW",
-            'kode_pos' => "Kode POS",
-            'users_id' => 2,
-            'detail' => "Detail Informasi"
-        ]);
+
+        // Alamat::create([
+        //     'nama' => "Nama",
+        //     'alamat' => "Alamat",
+        //     'provinsi' => "Provinsi",
+        //     'kabupaten' => "Kabupaten",
+        //     'kecamatan' => "Kecamatan",
+        //     'desa_kelurahan' => "Kelurahan",
+        //     'dusun' => "Dusun",
+        //     'rtrw' => "RT/RW",
+        //     'kode_pos' => "Kode POS",
+        //     'users_id' => 1,
+        //     'detail' => "Detail Informasi"
+        // ]);
+
+        // Alamat::create([
+        //     'nama' => "Nama",
+        //     'alamat' => "Alamat",
+        //     'provinsi' => "Provinsi",
+        //     'kabupaten' => "Kabupaten",
+        //     'kecamatan' => "Kecamatan",
+        //     'desa_kelurahan' => "Kelurahan",
+        //     'dusun' => "Dusun",
+        //     'rtrw' => "RT/RW",
+        //     'kode_pos' => "Kode POS",
+        //     'users_id' => 2,
+        //     'detail' => "Detail Informasi"
+        // ]);
     }
 }

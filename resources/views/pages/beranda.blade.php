@@ -46,7 +46,7 @@
                                                     <div class="crse_reviews">
                                                         <i class='uil uil-star'></i>4.5
                                                     </div>
-                                                    <span class="play_btn1"><i class="uil uil-play"></i></span>
+                                                    {{-- <span class="play_btn1"><i class="uil uil-play"></i></span> --}}
                                                 </div>
                                             </a>
                                             <div class="fcrse_content">

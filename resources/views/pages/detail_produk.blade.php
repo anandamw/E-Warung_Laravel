@@ -15,11 +15,11 @@
                                             data-bs-target="#videoModal">
                                             <img src="{{ asset('thumbnail_produk/' . $getsData->thumbnail) }}"
                                                 alt="">
-                                            <div class="course-overlay">
+                                            {{-- <div class="course-overlay">
                                                 <div class="badge_seller">Bestseller</div>
                                                 <span class="play_btn1"><i class="uil uil-play"></i></span>
                                                 <span class="_215b02">Preview this course</span>
-                                            </div>
+                                            </div> --}}
                                         </a>
                                     </div>
                                     <div class="_215b10">
@@ -136,6 +136,7 @@
                                                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                                                     }
                                                 });
+                                                
 
                                                 $('#productForm').submit(function(e) {
                                                     e.preventDefault();

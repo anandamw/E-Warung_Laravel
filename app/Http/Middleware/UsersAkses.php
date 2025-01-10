@@ -11,15 +11,19 @@ class UsersAkses
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @param  string  $role
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function handle(Request $request, Closure $next, $role): Response
     {
-
-        if (auth()->user()->role == $role) {
+        // Periksa apakah user sudah login dan role sesuai
+        if (auth()->check() && auth()->user()->role === $role) {
             return $next($request);
         }
 
-        return response("404 ERRORS");
+        // Kembalikan halaman 404 jika akses ditolak
+        abort(404); // Lebih baik gunakan abort() untuk menghindari view langsung
     }
 }
