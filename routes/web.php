@@ -45,7 +45,6 @@ Route::middleware('guest')->group(function () {
     Route::get('/produk', [ProduksController::class, 'produk']);
 
 
-
     // testing query
     // Route::get('/testing', [SuperKurirController::class, 'index']);
 });

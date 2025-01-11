@@ -47,6 +47,7 @@ class UsersSeeder extends Seeder
                 'deskripsi' => null
 
             ],
+            
             [
                 "username" => "Customer",
                 "email" => "customer@gmail.com",
